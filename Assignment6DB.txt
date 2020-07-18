@@ -1,0 +1,10 @@
+1)  select *from orders where Odate='1990-10-03';
+select Onum,Amt,Odate from orders where Odate='1990-10-03';
+
+2) select *from customers where snum='1001' or snum='1004';
+
+3) SELECT *FROM CUSTOMERS WHERE CNAME >= 'A%' AND CNAME <= 'G%';
+
+4)SELECT *from customers where cname like 'C%';
+
+5) select *from orders where amt not in ('0','null');

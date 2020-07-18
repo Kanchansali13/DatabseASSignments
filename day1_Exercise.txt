@@ -1,0 +1,108 @@
+create table SEMP
+(
+	EMPNO CHAR(4),
+	EMPNAME CHAR(20),
+	BASIC FLOAT(9,2),
+	DEPTNO CHAR(2),
+	DEPTHEAD CHAR(4) 
+);
+
+CREATE TABLE SDEPT
+(
+	DEPTNO CHAR(2),
+	DEPTNAME CHAR(15)
+);
+
+INSERT INTO SDEPT VALUES('10', 'DEVELOPMENT');
+INSERT INTO SDEPT VALUES('20','TRAINING');
+------------------------------------------------------------------------------------------------------
+
+INSERT INTO SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD) VALUES('0001','SUNIL',6000,'10','NULL');
+
+INSERT INTO SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD) VALUES('0002','HIREN',8000,'20','NULL');
+
+INSERT INTO SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD) VALUES('0003','ALI',4000,'10','0001');
+
+INSERT INTO SEMP(EMPNO,EMPNAME,BASIC,DEPTNO,DEPTHEAD) VALUES('0004','GEORGE',6000,NULL,'0002');
+
+SELECT *FROM SEMP;
+_______________________________________________________________________________________
+
+CREATE TABLE SUPPLIER
+(
+	`S#` char(4) ,
+	Sname varchar(10),
+	Status varchar(10),
+	City char(10)
+);
+
+CREATE TABLE PARTS
+(
+	`P#` char(4),
+	Pname varchar(10),
+	Color varchar(10),
+	Weight int(4),
+	City char(10)
+);
+
+CREATE TABLE Projects
+(
+	`j#` char(4),
+	jname varchar(10),
+	City char(10)
+);
+
+create table spj
+(
+	`s#` char(4),
+	`P#` char(4),
+	`J#` char(4), 
+	QUALITY INT(4)
+);
+
+insert into SUPPLIER 
+values ('S1','schott',10,'Los vegas'),
+	('S2','john',20,'france'),
+       	 ('S3','jenny',30,'Mumbai'),
+	('S4','archer',40,'USA'),
+      	  ('S5','smith',60,'London'),
+	('S6','sam',50,'delhi');
+	
+
+insert into projects
+values ('j1','smita','Los vegas'),
+	('j2','david','france'),
+       	 ('j3','jenny','boston'),
+	('j4','emi','Berlin'),
+      	  ('j5','jaby','New york'),
+	('j6','daniel','Hongkong');
+
+insert into parts
+values ('p1','jaby','Blue','67','Los vegas'),
+	('p2','hema','green','70','London'),
+	('p1','veer','Black','98','hongkong');
+	
+update parts set `P#`='p3' where pname='veer';
+
+5.select *from supplier;
+
+6.select `s#`,sname from supplier;
+
+7.select pname,color from parts where city='London';
+
+8.select sname from supplier;
+
+9.select sname from supplier where city='Mumbai' Or city='delhi';
+
+10.select jname from projects where city='New York';
+
+11.select pname from parts where weight<=12 and  weight>=14;
+
+12. select sname from supplier where status>=20;
+
+13.select * from SUPPLIER where City != 'London';
+
+14.select city from supplier;
+
+15.select Weight as "Weight in grams",Weight*1000 AS "weight in milligrams", Weight/1000 As "Weight in killograms" from parts;
+

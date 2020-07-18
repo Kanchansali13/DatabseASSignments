@@ -1,0 +1,13 @@
+1)select *from supplier order by city desc;
+
+2)select *from parts order by city,pname;
+
+3)select *from supplier where status >=10 and status<=20;
+
+4)select pname,weight from parts where weight not in('10','15');
+
+5)select *from parts where pname like 's%';
+
+6)select *from supplier where city like 'L%';
+
+7) select *from parts where pname like '--n%';
