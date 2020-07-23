@@ -1,0 +1,11 @@
+ 1) select count(onum) from orders where Odate='1990-10-03';
+
+2) select count(distinct city)as "totalcount" from customers where city is not NULL;
+
+3) select cnum,min(amt)"min_order" from orders group by cnum;
+
+4) select *from customers where cname like 'G%' order by cname;
+
+5)select city,max(rating) from customers;
+
+6)select snum, count(odate) "total orders",odate from orders group by odate;

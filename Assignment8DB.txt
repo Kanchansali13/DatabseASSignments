@@ -1,0 +1,7 @@
+1) select onum,snum,amt,(amt*12/100) "commision"from orders;
+
+2) select concat("for the city -",city," the highest rating is:",max(rating)) "output" from customers group by city;
+
+3) select rating,cname,cnum from customers order by rating desc;
+
+4) select count(odate) "order count",odate from orders group by odate order by "order count";
