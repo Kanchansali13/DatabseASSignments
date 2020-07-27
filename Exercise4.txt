@@ -1,0 +1,27 @@
+1) select min(status) "minium status" from supplier;
+
+2) select max(weight) "Maximiumweight" from parts;
+
+3) select avg(weight) "average" from parts;
+
+4) select `p#`,sum(quality) "total quality" from spj where `p#`='p1';
+
+5)  select `p#`,sum(quality) from spj group by `p#`;
+
+6)select `p#`,avg(quality) from spj group by `p#`;
+
+7)select `P#`,max(qty) from supplier_parts_project where qty > 800 group by `P#`;
+
+8)select Sname,Status,count(status) from supplier group by status;
+
+9)select count(jname) ,city from projects group by city;
+
+10) count(status) will count the total row of that coloumn and count(*) will count all the row of table.
+
+11)select case
+when status='10' then 'ten'
+when status='20' then 'twenty'
+when status='30' then 'thirty'
+when status='40' then 'fourty'
+else 'others'
+end status,count(status) from supplier group by status;

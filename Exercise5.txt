@@ -1,0 +1,25 @@
+1) select supplier.sname,spj.quality from spj,supplier where supplier.`s#`=spj.`s#` group by supplier.`s#`;
+
+2) select parts.pname,spj.quality from spj,parts where parts.`p#`=spj.`p#` group by parts.`p#`;
+
+3) select projects.jname,spj.quality from spj,projects where projects.`j#`=spj.`j#` group by projects.`j#`;
+
+4)select distinct sname,pname,jname,quality from supplier,parts,projects,spj where supplier.`s#`=spj.`s#` and parts.`p#`=spj.`p#`=projects.`j#`=spj.`j#` group by sname,pname,jname limit 10;
+
+5)select sname,pname,jname from supplier,parts,projects where supplier.city=parts.city and parts.city=projects.city;
+
+6)select pname,quality from parts,spj where parts.color='red' and parts.`p#`=spj.`p#`;
+
+7) select distinct sname,quality from supplier,spj where supplier.status='20' and supplier.`s#`=spj.`s#`;
+
+8) select distinct pname,quality from parts,spj where parts.weight>14 and parts.`p#`=spj.`p#`;
+
+9)select jname "project name",projects.city from projects,spj,parts where parts.`p#`=spj.`p#` and projects.`j#`=spj.`j#` and spj.quality>500;
+
+10) select parts.pname,spj.quality,parts.weight from parts,spj where parts.weight<15 and parts.`p#`=spj.`p#`;
+
+11) select e1.ename Empname,
+       e2.eName Mgr
+     from emp e1
+     inner join emp e2
+     on e1.mgr = e2.empno;

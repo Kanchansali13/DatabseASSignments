@@ -1,0 +1,25 @@
+1) select concat(substr(upper(sname),1,1),substr(lower(sname),2)) as "suppliername" from supplier;
+
+2) select upper(sname) from supplier;
+
+3)select lower(sname) from supplier;
+
+4)select lpad(sname,25,' ')as "suppname" from supplier;
+
+5) select replace(sname,'la','ro') from supplier;
+
+6)select  replace(replace(sname,'l','r'),'a','o')as "result of replace" from supplier;
+
+7)select sname,length(sname) from supplier;
+
+8)select *from supplier where soundex(sname)=soundex('BLOKE');
+
+9)select case
+when status='10' then 'ten'
+when status='20' then 'twenty'
+when status='30' then 'thirty'
+when status='40' then 'fourty'
+else 'others'
+end status from supplier;
+
+10)select dayname(sysdate()) "today dayname" from dual;

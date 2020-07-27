@@ -1,0 +1,7 @@
+1)select *from customers where rating>=any(select rating from customers where snum=(select snum from salespeople where sname='serres'));
+
+2) select *from salespeople where(snum,city)!= all(select  snum,city from customers);
+
+3) select *from orders  where amt > ANY(select amt from orders where cnum in(select cnum from customers where city='london'));
+
+4)select *from orders  where amt > ANY(select min(amt) from orders where cnum in(select cnum from customers where city='london'));

@@ -1,0 +1,7 @@
+1)create index index_orders on orders(odate);
+
+2) alter table orders add primary key(onum);
+
+3) create index index_ord on orders(odate);
+
+4)alter table customers add primary key(rating);
