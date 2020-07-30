@@ -1,0 +1,21 @@
+1)create table orders1 ( onum char(4),  cnum char(4),  snum char(4), 
+ odate date not null,  primary key(onum,cnum,snum) 
+ ); 
+
+2)create table sales1
+(
+snum int(4) primary key,
+sname varchar(10) check(substr(upper(ename),1,1) between 'A' and 'M'),
+city varchar(10),
+comm float(3,2)  default 0.10
+);
+
+3) create table ord
+(
+onum char(4) not null,
+cnum char(4) not null,
+snum char(4) not null,
+amt char(6),
+odate date,
+check(onum>cnum and cnum>snum)
+);

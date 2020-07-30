@@ -1,0 +1,13 @@
+1)i)CREATE TABLE cityorders
+SELECT onum,amt,snum,cnum,city
+FROM orders
+NATURAL JOIN customers;
+
+ii)ALTER TABLE cityorders add
+FOREIGN key(onum);
+
+2) ALTER table cityorders add
+foreign key(cnum) references customers(cnum);
+
+alter table copy_order add
+foreign key(prev) references copy_order(onum);
